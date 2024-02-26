@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    *, *::after, *::before {
+        margin: 0;
+        box-sizing: border-box;
+        padding: 0;
+    }
+
+    :root {
+        --slate-100: rgb(241 245 249);
+        --slate-200: rgb(226 232 240);
+        --slate-300: rgb(203 213 225);
+        --slate-400: rgb(148 163 184);
+        --slate-900: rgb(15 23 42);
+
+        --ltColor: #0ebac5;
+        --ltDark: #012F32;
+    }
+
+    body {
+        background-color: var(--slate-100);
+    }
+
+    .root-container {
+        display: grid;
+        justify-content: center;
+        padding-top: 8em;
+    }
+
+    .heading-text {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 20px;
+    }
+
+    .card {
+        background-color: #fff;
+    }
+
+    .img-wrapper {
+        width: 100%;
+    }
+
+    .img-wrapper img {
+        aspect-ratio: 9 / 6;
+        width: 100%;
+    }
+
+    .root-container {
+        width: 100vw;
+    }
+
+    .wrapper {
+        width: 100%;
+    }
+
+    .blog-cover-img-wrapper {
+        height: 40vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 3em;
+
+        background-image: url(/public/blogbg.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .blog-cover-img-wrapper h1 {
+        margin: 10px 0 ;
+        text-align: center;
+        font-size: 4em;
+        color: white;
+    }
+
+    .blog-cover-img-wrapper a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.5em;
+    }
+
+    .cards-wrapper {
+        width: 100%;
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(3, 250px);
+        gap: 20px;
+        margin-bottom: 2em;
+    }
+
+    .card-content {
+        padding: 5px 20px;
+    }
+
+    .card-content h3 {
+        font-family: calibri;
+        text-align: center;
+    }
+
+    .card-content p {
+        font-family: calibri;
+        font-size: 14px;
+        color: var(--slate-900);
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .card-content a {
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        background: var(--ltColor);
+        border-radius: 5px;
+        color: #fff;
+        transition: background 0.5s ease;
+        padding: 10px 0;
+    }
+
+    .card-content a:hover {
+        background-color: black;
+    }
+
+    @media screen and (max-width: 850px) {
+            .cards-wrapper {
+                grid-template-columns: repeat(2, 250px);
+        }
+    }
+
+    @media screen and (max-width: 600px){
+            .cards-wrapper {
+                grid-template-columns: repeat(1, 250px);
+        }
+    }
+</style>
+<body>
+    <main class="logo-container">
+        <header>
+            <nav class="navbar">
+                <!-- Logo -->
+                <div class="logo">
+                    <h1>Nonso</h1>
+                </div>
+
+                <!-- Nav Links -->
+                <div class="navlinks">
+                    <ul>
+                        <li>
+                            <a href="/index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="index.html#aboutMe">About Me</a>
+                        </li>
+                        <li>
+                            <a href="index.html#servesSection">Services</a>
+                        </li>
+                        <li>
+                            <a href="index.html#workExperince">Experiences</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/blogs.html">Blog</a>
+                        </li>
+                        <li>
+                            <a href="index.html#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="hamburger-icon-wrapper">
+                    <span class="hamburger-icon"> = </span>
+                </div>
+
+            </nav>
+        </header>
+    </main>
+
+    <!-- Blog Cover Image -->
+    <main class="blog-cover-img-wrapper">
+        <section id="blog">
+            <div class="blog-cover">
+                <h1>Blog</h1>
+                <div>
+                    <span><a href="index.html">Home</a> | <a href="blogs.html#blog">Blog</a></span>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- blog Content -->
+    <main class="root-container">
+        <section class="wrapper">
+
+            <article class="cards-wrapper">
+                <!-- Card 1 -->
+                <div class="card c1">
+                    <div class="img-wrapper">
+                        <img src="https://user-images.githubusercontent.com/78242022/284473812-eda73791-83d8-47db-bb4f-21de64621094.jpg" alt="">
+                    </div>
+                    <div class="card-content">
+                        <h3>Web scraping with Cheerio, Axios, and Express</h3>
+                        <p>
+                            Web Scraping is the process of extracting data from the DOM of a website and then returning it data for external use in another application. Web...</p>
+                        <a href="#">
+                          Ream More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card c2">
+                    <div class="img-wrapper">
+                        <img src="https://user-images.githubusercontent.com/78242022/284473814-ce190653-81e6-4155-adf5-c46a07154e6f.jpg" alt="">
+                    </div>
+                    <div class="card-content">
+                        <h3>useLocation Hook in React Router</h3>
+                        <p>
+                            A Complete guide to useLocation hook in React Router · Introduction Single Page Application takes a different approach when navigating from one page...</p>
+                        <a href="#">
+                            Ream More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card c3">
+                    <div class="img-wrapper">
+                        <img src="https://user-images.githubusercontent.com/78242022/284473823-1d713ee7-af6a-4913-b4e4-01d2d78c7e2d.jpg" alt="">
+                    </div>
+                    <div class="card-content">
+                        <h3>Scraping with puppeteer and export in JSON format</h3>
+                        <p> 
+            
+                            Export Scraped data from puppeteer · App development is no walk in the park, figuring out the right themes to use, frameworks or libraries when building...
+                            
+                            Scraping with puppeteer and export in JSON format
+                            useLo</p>
+                        <a href="#">
+                            Ream More
+                        </a>
+                    </div>
+                </div>
+
+                 <!-- Card 4 -->
+                 <div class="card c4">
+                    <div class="img-wrapper">
+                        <img src="https://user-images.githubusercontent.com/78242022/284007689-57bf4df4-9ca5-4b52-b681-456474fa5fae.jpg" alt="">
+                    </div>
+                    <div class="card-content">
+                        <h3>NavLink Component in React Router</h3>
+                        <p> 
+                            A Complete guide to NavLink Component in React Router · Introduction The <NavLink> component in React-Router is used for navigating to different...</p>
+                        <a href="#">
+                            Ream More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="card c5">
+                    <div class="img-wrapper">
+                        <img src="https://user-images.githubusercontent.com/78242022/284473830-babc90af-7e73-4ee8-813b-7d87c4fae908.jpg" alt="">
+                    </div>
+                    <div class="card-content">
+                        <h3>What is JSON</h3>
+                        <p>
+                            Introduction JavaScript Object Notation · JavaScript Object Notation (JSON) is a lightweight text-based format for storing structured data that can be...</p>
+                        <a href="#">
+                            Ream More
+                        </a>
+                    </div>
+                </div>
+
+                 <!-- Card 6 -->
+                 <div class="card c6">
+                    <div class="img-wrapper">
+                        <img src="https://user-images.githubusercontent.com/78242022/284473806-88860be4-6d93-42c7-ae7d-fd7052272f70.jpg" alt="">
+                    </div>
+                    <div class="card-content">
+                        <h3>Higher Order Array Methods in JavaScript</h3>
+                        <p>
+                            Higher Order Functions: in JavaScript · Higher Order Array Methods or Higher Order Functions are JavaScript built-in array methods that take in functions...</p>
+                        <a href="#">
+                            Ream More
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <!-- Footer -->
+<main class="footer-wrapper">
+    <footer>
+        <div class="logo-wrapper">
+            <p class="logo-footer">Nonso</p>
+        </div>
+
+        <div class="about-me-footer">
+            <p>Hi, am Nonso Amadi, A Frontend Developer and Freelancer</p>
+        </div>
+
+        <div class="icon-footer">
+            <span class="circle-bg">
+                <ion-icon name="logo-facebook"></ion-icon>
+            </span>
+
+            <span class="circle-bg">
+                <ion-icon name="logo-twitter"></ion-icon>
+            </span>
+
+            <span class="circle-bg">
+                <ion-icon name="logo-linkedin"></ion-icon>
+            </span>
+
+            <span class="circle-bg">
+                <ion-icon name="logo-discord"></ion-icon>
+            </span>
+
+            <span class="circle-bg">
+                <ion-icon name="logo-github"></ion-icon>
+            </span>
+
+            <span class="circle-bg">
+                <ion-icon name="logo-dribbble"></ion-icon>
+            </span>
+        </div>
+
+        <div class="copyright">
+           <p> Copyright &copy; 2024, Nonso Amadi</p>
+        </div>
+    </footer>
+</main>
+
+<!-- Scripts -->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script type="module" src="/main.js"></script>
+
+</body>
+</html>
