@@ -19,6 +19,11 @@
   --font-relaway: "Raleway", sans-serif;
 }
 
+a {
+  color: black;
+  text-decoration: none;
+}
+
 .logo h1 {
   font-family: calibri;
   font-size: 2em;
@@ -110,6 +115,7 @@ margin: 0 auto;
 display: grid;
 grid-template-columns: repeat(2, 1fr);
 justify-content: space-between;
+gap: 10px;
 }
 
 .welcome-text {
@@ -136,7 +142,11 @@ font-size: 1.5em;
 margin: 1em 0;
 }
 
-.btn-wrapper button {
+.btn-wrapper .button {
+  display: block;
+  width: fit-content;
+  width: -moz-fit-content;
+text-decoration: none;
 border: none;
 background-color: var(--ltColor);
 color: white;
@@ -149,13 +159,13 @@ cursor: pointer;
 user-select: none;
 }
 
-.btn-wrapper button:hover {
+.btn-wrapper .button:hover {
 background-color: white;
 color: var(--ltColor);
 outline: 1px solid var(--ltColor);
 }
 
-.btn-wrapper button:active {
+.btn-wrapper .button:active {
 transform: translateY(1px);
 }
 
@@ -172,7 +182,7 @@ width: 100%;
 }
 
 .profile-img .model-img {
-width: 200px;
+width: 300px;
 position: absolute;
 left: 30%;
 bottom: 0%;
@@ -385,18 +395,20 @@ transition: background 0.5s linear;
 }
 
 .work-experince .content div:hover {
-background-color: var(--ltColor);
+background-color: var(--slate-200);
 }
 
-.work-experince .content div:hover ion-icon,
-.work-experince .content div:hover .company-name {
-color: white;
+
+.work-experince .content .company-logo  {
+  display: inline-block;
+  width: 30px;
 }
 
-.work-experince .content ion-icon {
-font-size: 32px;
-color: var(--slate-400);
+.work-experince .content .company-logo img {
+  width: 100%;
+  aspect-ratio: 1/1;
 }
+
 
 .work-experince .content div .company-name{
 display: inline-block;
